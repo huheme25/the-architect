@@ -35,8 +35,10 @@ Read `questions/phase-2-branches.md` — use the section matching the identified
 
 Read `questions/phase-3-confirmation.md`. Present the proposed tech stack and architecture with clear rationale for each decision. Be opinionated — recommend what you believe is best, explain why.
 
-**Skill integration during this phase:**
-- Use `/ui-ux-pro-max` to design the visual system (colors, typography, spacing, component style) for any project with a frontend
+**Design (brandbook-first) — mandatory for any project with a frontend:**
+- **First ask: does the client already have a brandbook / brand identity?** If yes, the design system must derive from it (extract real tokens — never invent a palette). If not, ask where the design is going (references, desired feeling, audience, scene of use), propose a direction, and get confirmation. Read `knowledge/building-blocks/design-system.md` for the full protocol.
+- Use `/ui-ux-pro-max` to compose the visual system (colors, typography, spacing, component style, motion) on top of that decision.
+- Fill blueprint section 7 (Design System) opinionatedly: brand origin, register, the three dials, OKLCH colors, paired typography, motion, and the banned anti-patterns. A vague section 7 is where generic output creeps back in.
 - If the user mentions a reference site, use `/chrome-bridge-automation` or `/playwright-cli` to screenshot and analyze it
 
 Ask for confirmation or adjustments before generating.

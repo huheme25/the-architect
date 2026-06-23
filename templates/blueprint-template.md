@@ -103,33 +103,48 @@
 
 ## 7. Design System
 
-### Colors
-| Role | Hex | Usage |
-|------|-----|-------|
-| Primary | {#hex} | {buttons, links, accents} |
-| Secondary | {#hex} | {secondary actions} |
-| Background | {#hex} | {page background} |
-| Surface | {#hex} | {cards, panels} |
-| Text | {#hex} | {body text} |
-| Muted | {#hex} | {secondary text, borders} |
-| Destructive | {#hex} | {errors, delete actions} |
-| Success | {#hex} | {confirmations} |
+> This section must be self-sufficient: the builder's designers consume it directly. See `knowledge/building-blocks/design-system.md` for how to fill it well (brandbook-first, register, anti-slop).
+
+### Brand Origin & Register
+- **Brand origin:** {Does the client HAVE a brandbook/identity? `existing` (digest its real tokens — never invent a palette) or `from-scratch` (the direction below was confirmed with the client).}
+- **Register:** {`brand` — design IS the product: marketing, landing, campaign · or `product` — design SERVES the product: app, admin, dashboard, tool}
+- **Direction (one paragraph):** {the visual direction + WHY it does NOT collapse into the category cliché — pass the slop test}
+- **Dials:** VARIANCE {low|med|high} · MOTION_INTENSITY {low|med|high} · DENSITY {low|med|high}
+
+### Colors (OKLCH)
+| Role | OKLCH | Usage |
+|------|-------|-------|
+| Background | {oklch()} | {page bg — NOT a warm cream/sand default} |
+| Surface | {oklch()} | {cards, panels} |
+| Ink (text) | {oklch()} | {body text — contrast ≥4.5:1} |
+| Muted | {oklch()} | {secondary text — verify contrast} |
+| Accent | {oklch()} | {brand accent} |
+| Destructive | {oklch()} | {errors, delete} |
+| Success | {oklch()} | {confirmations} |
+
+- **Color strategy:** {restrained | committed | full-palette | drenched}
 
 ### Typography
 | Role | Font | Size | Weight |
 |------|------|------|--------|
-| Headings | {font family} | {scale} | {weight} |
-| Body | {font family} | {size} | {weight} |
-| Code | {font family} | {size} | {weight} |
+| Display/Heading | {family} | {clamp() max ≤6rem} | {weight} |
+| Body | {family} | {65–75ch line} | {weight} |
+| Code | {family} | {size} | {weight} |
+
+- **Pairing on a contrast axis** (serif+sans / geometric+humanist / one family in weights). Not two similar sans.
 
 ### Spacing & Layout
-- Spacing scale: {e.g., 4px base — 4, 8, 12, 16, 24, 32, 48, 64}
-- Border radius: {e.g., 8px default, 12px cards, full for avatars}
-- Max content width: {e.g., 1280px}
-- Breakpoints: {sm, md, lg, xl}
+- Spacing scale: {e.g., 4px base — 4, 8, 12, 16, 24, 32, 48, 64} (vary for rhythm)
+- Border radius: {default / cards / avatars}
+- Max content width / Breakpoints: {…}
+- Semantic z-index scale: dropdown → sticky → modal-backdrop → modal → toast → tooltip
 
-### Component Style
-{Overall aesthetic: rounded/sharp, shadows/flat, dense/spacious, animations}
+### Motion
+- {Signature animation + token timings (100/300/500) and easing (ease-out-quart/quint/expo). `prefers-reduced-motion` is mandatory. No bounce/elastic, no animating layout. Omit if MOTION_INTENSITY is low.}
+
+### Component Style & Banned Anti-Patterns
+- **Aesthetic:** {rounded/sharp, shadows/flat, dense/spacious}
+- **Banned (AI slop):** side-stripe borders, gradient text, default glassmorphism, hero-metric template, identical/nested card grids, per-section uppercase eyebrows, reflexive 01/02/03 markers, overflowing headings.
 
 ---
 
