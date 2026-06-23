@@ -1,5 +1,5 @@
-# Generated blueprints (user-specific, not for repo)
-output/*.md
+# Blueprints generados — en el fork de huheme25 SÍ se versionan (biblioteca de planos propia).
+# (En el repo original de Hainrixz esta regla los excluía por ser user-specific.)
 
 # OS files
 .DS_Store
